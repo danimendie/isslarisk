@@ -119,26 +119,32 @@ body::after {
 
 .logo {
   display: flex;
-  gap: 10px;
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
+  border-radius: 6px;
+  transition: opacity 0.2s;
 }
 
-.logo-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--gold);
-  border-radius: 50%;
-  flex-shrink: 0;
+.logo:hover { opacity: 0.85; }
+
+.logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  /* PNG has dark bg — looks great on dark naturally */
 }
 
-.logo-text {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 18px;
-  color: var(--text-primary);
-  letter-spacing: -0.3px;
+/* Footer logo slightly smaller */
+.footer-logo .logo-img {
+  height: 30px;
+}
+
+/* Light mode: dark pill behind logo so bg blends cleanly */
+body.light .logo {
+  background: #0d1421;
+  padding: 4px 10px;
+  border-radius: 6px;
 }
 
 .nav-links {
