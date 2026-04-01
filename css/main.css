@@ -1191,6 +1191,11 @@ section {
   text-align: left;
   cursor: pointer;
   gap: 16px;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.4;
 }
 
 .faq-q-text {
@@ -2919,3 +2924,84 @@ body.light #hamburger span {
 /* Moon icon shown in light mode (click to go dark) */
 body.light #theme-toggle .icon-sun  { display: none; }
 body.light #theme-toggle .icon-moon { display: block; }
+
+/* ============================================================
+   ACCESSIBILITY: SKIP LINK
+   ============================================================ */
+
+.skip-to-main {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--gold);
+  color: #0a0c10;
+  padding: 10px 20px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  z-index: 99999;
+  transition: top 0.15s ease;
+}
+
+.skip-to-main:focus {
+  top: 0;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   ACCESSIBILITY: FOCUS VISIBLE
+   ============================================================ */
+
+/* Remove default outline only when not keyboard navigating */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Visible outline for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.2);
+}
+
+.nav-links a:focus-visible,
+#mobile-menu a:focus-visible,
+.footer-nav-group a:focus-visible,
+.footer-legal a:focus-visible,
+.footer-social a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+#hamburger:focus-visible,
+#scroll-top:focus-visible,
+#theme-toggle:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.faq-question:focus-visible,
+.faq-cat-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: 2px solid rgba(201, 168, 76, 0.5);
+  outline-offset: 0;
+  border-color: var(--gold) !important;
+}

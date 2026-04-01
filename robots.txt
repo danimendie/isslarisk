@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.isslarisk.com/sitemap.xml
+
+# Disallow access to any development or admin paths (none currently, but defensive)
+Disallow: /admin/
+Disallow: /.git/

@@ -66,22 +66,56 @@ document.addEventListener('DOMContentLoaded', function() {
   var hamburger = document.getElementById('hamburger');
   var mobileMenu = document.getElementById('mobile-menu');
   if (hamburger && mobileMenu) {
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
     hamburger.addEventListener('click', function() {
       var isOpen = mobileMenu.classList.toggle('open');
       hamburger.classList.toggle('open', isOpen);
       hamburger.setAttribute('aria-expanded', String(isOpen));
       mobileMenu.setAttribute('aria-hidden', String(!isOpen));
       document.body.style.overflow = isOpen ? 'hidden' : '';
+      // Focus first menu link when opening
+      if (isOpen) {
+        var firstLink = mobileMenu.querySelector('a');
+        if (firstLink) firstLink.focus();
+      }
     });
+
     // Close on link click
     mobileMenu.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        mobileMenu.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        mobileMenu.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Focus trap: keep Tab within menu when open
+    mobileMenu.addEventListener('keydown', function(e) {
+      if (!mobileMenu.classList.contains('open')) return;
+      var focusable = Array.from(mobileMenu.querySelectorAll('a, button'));
+      if (focusable.length === 0) return;
+      var first = focusable[0];
+      var last  = focusable[focusable.length - 1];
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+        } else {
+          if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+        }
+      }
+      // Close on Escape
+      if (e.key === 'Escape') { closeMobileMenu(); hamburger.focus(); }
+    });
+
+    // Also close on Escape from hamburger button
+    hamburger.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        closeMobileMenu();
+      }
     });
   }
 
