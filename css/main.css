@@ -122,29 +122,30 @@ body::after {
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
-  border-radius: 6px;
   transition: opacity 0.2s;
 }
 
 .logo:hover { opacity: 0.85; }
 
 .logo-img {
-  height: 36px;
-  width: auto;
+  height: 44px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center center;
   display: block;
-  /* PNG has dark bg — looks great on dark naturally */
+  filter: brightness(1.5) contrast(1.1);
 }
 
-/* Footer logo slightly smaller */
+/* Footer logo */
 .footer-logo .logo-img {
-  height: 30px;
+  height: 36px;
+  width: 160px;
 }
 
-/* Light mode: dark pill behind logo so bg blends cleanly */
-body.light .logo {
-  background: #0d1421;
-  padding: 4px 10px;
-  border-radius: 6px;
+/* Light mode */
+body.light .logo-img {
+  mix-blend-mode: multiply;
+  filter: none;
 }
 
 .nav-links {
