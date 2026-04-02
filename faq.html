@@ -27,7 +27,6 @@
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="favicon-issla.png" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <!-- Preconnect for performance -->
@@ -42,7 +41,7 @@
 <a href="#main-content" class="skip-to-main">Skip to main content</a>
 
 <div id="cookie-banner" style="display:none">
-  <p>We use cookies to improve your experience. <a href="privacy-policy.html">Privacy Policy</a></p>
+  <p>We use cookies to improve your experience. <a href="privacy-policy.html" data-i18n="footer.link.privacy">Privacy Policy</a></p>
   <div>
     <button id="cookie-accept">Accept</button>
     <button id="cookie-decline">Decline</button>
@@ -57,22 +56,32 @@
       <img src="logo.png" alt="ISSLA Risk" class="logo-img" loading="lazy" width="140" height="40" />
     </a>
     <nav class="nav-links" aria-label="Primary navigation">
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="faq.html" class="active">FAQ</a>
-      <a href="contact.html">Contact</a>
+      <a href="services.html" data-i18n="nav.services">Services</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="faq.html" class="active" data-i18n="nav.faq">FAQ</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
-    <a href="contact.html" class="btn btn-primary nav-cta">Request Briefing</a>
+    <div class="lang-toggle" aria-label="Language selector">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <span class="lang-sep" aria-hidden="true">|</span>
+      <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+    <a href="mailto:info@isslarisk.com" class="btn btn-primary nav-cta" data-i18n="nav.cta">Request Briefing</a>
     <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div id="mobile-menu" aria-hidden="true">
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="faq.html" class="active">FAQ</a>
-    <a href="contact.html">Contact</a>
-    <a href="contact.html" class="btn btn-primary">Request Briefing</a>
+    <a href="services.html" data-i18n="nav.services">Services</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="faq.html" class="active" data-i18n="nav.faq">FAQ</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <a href="mailto:info@isslarisk.com" class="btn btn-primary" data-i18n="nav.cta">Request Briefing</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <span class="lang-sep" aria-hidden="true">|</span>
+      <button class="lang-btn" data-lang="es">ES</button>
+    </div>
   </div>
 </header>
 
@@ -81,9 +90,9 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <p class="page-hero-eyebrow">Frequently Asked Questions</p>
-      <h1 class="page-hero-title">Questions &amp; Answers</h1>
-      <p class="page-hero-sub">Everything you need to know about ISSLA Risk's services, process, and how we work. If your question isn't answered here, contact us directly.</p>
+      <p class="page-hero-eyebrow" data-i18n="faq.hero.eyebrow">Frequently Asked Questions</p>
+      <h1 class="page-hero-title" data-i18n="faq.hero.title">Questions &amp; Answers</h1>
+      <p class="page-hero-sub" data-i18n="faq.hero.sub">Everything you need to know about ISSLA Risk's services, process, and how we work. If your question isn't answered here, contact us directly.</p>
       <p class="page-hero-breadcrumb"><a href="index.html">Home</a> / FAQ</p>
     </div>
   </section>
@@ -96,15 +105,15 @@
         <!-- SIDEBAR -->
         <aside class="faq-sidebar" aria-label="FAQ categories">
           <p class="faq-sidebar-label">Categories</p>
-          <button class="faq-cat-btn active" data-target="cat-about">About ISSLA Risk</button>
-          <button class="faq-cat-btn" data-target="cat-services">Our Services</button>
-          <button class="faq-cat-btn" data-target="cat-process">Process &amp; Methodology</button>
-          <button class="faq-cat-btn" data-target="cat-confidentiality">Confidentiality &amp; Security</button>
-          <button class="faq-cat-btn" data-target="cat-reports">Reports &amp; Deliverables</button>
-          <button class="faq-cat-btn" data-target="cat-engagement">Starting an Engagement</button>
+          <button class="faq-cat-btn active" data-target="cat-about" data-i18n="faq.cat.about">About ISSLA Risk</button>
+          <button class="faq-cat-btn" data-target="cat-services" data-i18n="faq.cat.services">Our Services</button>
+          <button class="faq-cat-btn" data-target="cat-process" data-i18n="faq.cat.process">Process &amp; Methodology</button>
+          <button class="faq-cat-btn" data-target="cat-confidentiality" data-i18n="faq.cat.confidentiality">Confidentiality &amp; Security</button>
+          <button class="faq-cat-btn" data-target="cat-reports" data-i18n="faq.cat.reports">Reports &amp; Deliverables</button>
+          <button class="faq-cat-btn" data-target="cat-engagement" data-i18n="faq.cat.engagement">Starting an Engagement</button>
           <div class="faq-sidebar-cta">
-            <p>Still have questions?</p>
-            <a href="contact.html" class="btn btn-primary" style="width:100%;text-align:center;">Contact Us</a>
+            <p data-i18n="faq.sidebar.still">Still have questions?</p>
+            <a href="mailto:info@isslarisk.com" class="btn btn-primary" style="width:100%;text-align:center;" data-i18n="faq.cta.btn1">Contact Us</a>
           </div>
         </aside>
 
@@ -113,34 +122,34 @@
 
           <!-- CATEGORY 1: ABOUT -->
           <div class="faq-category" id="cat-about">
-            <h2 class="faq-category-title">About ISSLA Risk</h2>
+            <h2 class="faq-category-title" data-i18n="faq.cat.about">About ISSLA Risk</h2>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                What is ISSLA Risk?
+                <span data-i18n="faq.a1.q">What is ISSLA Risk?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n-html="faq.a1.a">
                 <p>ISSLA Risk is a specialist corporate intelligence and risk advisory firm. We provide verified intelligence products to multinational corporations, private equity funds, legal practices, family offices, and government-adjacent entities. Our work focuses on four disciplines: global due diligence, background analysis, reputation analysis, and country risk &amp; political forecasting.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                Where is ISSLA Risk based?
+                <span data-i18n="faq.a2.q">Where is ISSLA Risk based?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
-                <p>Our headquarters is located in Albuquerque, New Mexico, USA. We also operate a regional office in Panama City, Republic of Panama, which supports our Latin American and Caribbean intelligence operations. Both offices can be reached at contact@isslarisk.com.</p>
+              <div class="faq-answer" data-i18n-html="faq.a2.a">
+                <p>Our headquarters is located in Albuquerque, New Mexico, USA. We also operate a regional office in Panama City, Republic of Panama, which supports our Latin American and Caribbean intelligence operations. Both offices can be reached at info@isslarisk.com.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                What geographic regions does ISSLA Risk cover?
+                <span data-i18n="faq.a3.q">What geographic regions does ISSLA Risk cover?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n-html="faq.a3.a">
                 <p>ISSLA Risk covers North America, the Caribbean, and South America. We have particular expertise in markets characterized by elevated opacity, political risk, or complex regulatory environments — including the United States, Canada, Panama, Colombia, Brazil, Argentina, Peru, Mexico, and Caribbean offshore jurisdictions such as the BVI and Cayman Islands. Founded in 2009, we have built specialized source networks across these regions over more than fifteen years of operational activity.</p>
               </div>
             </div>
@@ -149,41 +158,41 @@
 
           <!-- CATEGORY 2: SERVICES -->
           <div class="faq-category" id="cat-services">
-            <h2 class="faq-category-title">Our Services</h2>
+            <h2 class="faq-category-title" data-i18n="faq.cat.services">Our Services</h2>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                What services does ISSLA Risk offer?
+                <span data-i18n="faq.s1.q">What services does ISSLA Risk offer?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n-html="faq.s1.a">
                 <p>We offer four core intelligence services:</p>
                 <ul>
-                  <li><strong>Global Due Diligence</strong> — Pre-investment partner and vendor vetting, available in three tiers (Essential, Comprehensive, and Executive).</li>
-                  <li><strong>Background Analysis</strong> — Deep professional and personal background research on individuals for high-stakes appointments or partnerships.</li>
-                  <li><strong>Reputation Analysis</strong> — Structured assessment of how a subject entity or individual is perceived across markets, media, and stakeholder networks.</li>
-                  <li><strong>Country Risk &amp; Political Forecast</strong> — Geopolitical and regulatory risk assessments for market entry, operational decisions, or investment committees.</li>
+                  <li><strong>Enhanced Due Diligence</strong> — Pre-investment partner and vendor vetting, available in three tiers (Essential, Comprehensive, and Executive).</li>
+                  <li><strong>KYC / Customer Due Diligence</strong> — Deep professional history and public record research on individuals for high-stakes appointments or partnerships.</li>
+                  <li><strong>Reputational Intelligence</strong> — Structured assessment of how a subject entity or individual is perceived across markets, media, and stakeholder networks.</li>
+                  <li><strong>Jurisdictional Risk Assessment</strong> — Geopolitical and regulatory risk assessments for market entry, operational decisions, or investment committees.</li>
                 </ul>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                Who are your typical clients?
+                <span data-i18n="faq.s2.q">Who are your typical clients?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n-html="faq.s2.a">
                 <p>Our clients include multinational corporations, private equity and venture capital funds, legal and law firms, family offices, financial institutions, insurance and reinsurance companies, real estate developers, energy companies, and government-adjacent entities. Our common thread is clients whose decisions carry significant financial, legal, or reputational consequences — and who require verified intelligence rather than speculation.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                Can ISSLA Risk investigate private individuals?
+                <span data-i18n="faq.s3.q">Can ISSLA Risk conduct background research on individuals?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
-                <p>Yes — background analysis on individuals is one of our core services. All research is conducted within the bounds of applicable law, including GDPR, the US Privacy Act, and local data protection regulations. We research professional history, regulatory standing, litigation records, financial conduct, and reputational profile. We do not conduct surveillance, covert physical tracking, or any activity that violates applicable law.</p>
+              <div class="faq-answer" data-i18n-html="faq.s3.a">
+                <p>Yes — background analysis on individuals is one of our core services, conducted as open-source and public record research within the scope of our corporate intelligence consulting mandate. All research is performed using lawful methods: public registries, court records, media archives, professional networks, and human source consultation. We research professional history, regulatory standing, litigation records, financial conduct, and reputational profile. ISSLA Risk is a corporate intelligence consulting and advisory firm — we do not operate as a licensed private investigation agency, and we do not conduct surveillance, covert physical tracking, or any activity that falls outside the bounds of applicable law.</p>
               </div>
             </div>
 
@@ -191,34 +200,34 @@
 
           <!-- CATEGORY 3: PROCESS -->
           <div class="faq-category" id="cat-process">
-            <h2 class="faq-category-title">Process &amp; Methodology</h2>
+            <h2 class="faq-category-title" data-i18n="faq.cat.process">Process &amp; Methodology</h2>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                What methodology does ISSLA Risk use?
+                <span data-i18n="faq.p1.q">What methodology does ISSLA Risk use?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n-html="faq.p1.a">
                 <p>Our methodology is built on three intelligence layers: OSINT (Open Source Intelligence), HUMINT (Human Intelligence), and SOCMIN (Social Media Intelligence). OSINT covers structured research of public records, registries, filings, and media archives. HUMINT involves our regional source networks providing ground-level verification. SOCMIN analyses digital footprints, professional profiles, and online behavioral patterns. Every significant finding requires independent corroboration before it appears in your report.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                How long does an engagement take?
+                <span data-i18n="faq.p2.q">How long does an engagement take?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n-html="faq.p2.a">
                 <p>Turnaround depends on the scope and type of engagement. An Essential due diligence report typically delivers within 5–7 business days. Comprehensive reports generally require 10–15 business days. Executive-level mandates, multi-subject engagements, and country risk assessments are scoped and scheduled individually. We can discuss expedited delivery for time-sensitive situations — contact us to discuss your specific timeline.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                How does ISSLA Risk verify its findings?
+                <span data-i18n="faq.p3.q">How does ISSLA Risk verify its findings?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n-html="faq.p3.a">
                 <p>No finding reaches your report without independent corroboration. We apply a two-source minimum standard for every significant claim — meaning every substantive conclusion is verified through at least two independent, non-derivative sources. Where a claim cannot be independently verified, it is either excluded or clearly labeled as unverified and attributed to its single source. This standard is non-negotiable across all engagement tiers.</p>
               </div>
             </div>
@@ -227,34 +236,34 @@
 
           <!-- CATEGORY 4: CONFIDENTIALITY -->
           <div class="faq-category" id="cat-confidentiality">
-            <h2 class="faq-category-title">Confidentiality &amp; Security</h2>
+            <h2 class="faq-category-title" data-i18n="faq.cat.confidentiality">Confidentiality &amp; Security</h2>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                How does ISSLA Risk protect client confidentiality?
+                <span data-i18n="faq.c1.q">How does ISSLA Risk protect client confidentiality?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n-html="faq.c1.a">
                 <p>Client confidentiality is the foundation of our practice. We do not confirm or deny the existence of any client relationship. All engagement details, deliverables, and communications are treated as strictly confidential. We do not use client information for any secondary purpose, do not discuss mandates with third parties, and do not reference past clients in marketing materials without explicit written authorization. All staff operate under binding confidentiality agreements.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                Is ISSLA Risk compliant with GDPR and data protection laws?
+                <span data-i18n="faq.c2.q">Is ISSLA Risk compliant with GDPR and data protection laws?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
-                <p>Yes. ISSLA Risk operates in full compliance with the European General Data Protection Regulation (GDPR), the United States Privacy Act, and applicable local data protection regulations in each jurisdiction where we operate. All research is conducted using lawful bases, and personal data is processed strictly for the purpose of the specific engagement. For full details, please review our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+              <div class="faq-answer" data-i18n-html="faq.c2.a">
+                <p>Yes. ISSLA Risk operates in full compliance with the European General Data Protection Regulation (GDPR), the United States Privacy Act, and applicable local data protection regulations in each jurisdiction where we operate. All research is conducted using lawful bases, and personal data is processed strictly for the purpose of the specific engagement. For full details, please review our <a href="privacy-policy.html" data-i18n="footer.link.privacy">Privacy Policy</a>.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                How are reports and communications transmitted?
+                <span data-i18n="faq.c3.q">How are reports and communications transmitted?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n-html="faq.c3.a">
                 <p>All deliverables are transmitted through secure, encrypted channels. We do not transmit sensitive reports via unencrypted email as standard practice. Specific secure delivery arrangements are confirmed with each client at the outset of the engagement. If you have existing secure communication protocols you prefer, we can adapt to them.</p>
               </div>
             </div>
@@ -263,24 +272,24 @@
 
           <!-- CATEGORY 5: REPORTS -->
           <div class="faq-category" id="cat-reports">
-            <h2 class="faq-category-title">Reports &amp; Deliverables</h2>
+            <h2 class="faq-category-title" data-i18n="faq.cat.reports">Reports &amp; Deliverables</h2>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                What does an ISSLA Risk report contain?
+                <span data-i18n="faq.r1.q">What does an ISSLA Risk report contain?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n-html="faq.r1.a">
                 <p>Report structure varies by service type and tier, but all ISSLA Risk reports include: an executive summary designed for decision-maker consumption, detailed findings organized by risk category, source attribution for every substantive claim, a risk rating or assessment conclusion, and actionable recommendations. Reports are professionally formatted and designed to be presented directly to investment committees, legal counsel, or boards without editorial modification.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                What are the differences between the Essential, Comprehensive, and Executive tiers?
+                <span data-i18n="faq.r2.q">What are the differences between the Essential, Comprehensive, and Executive tiers?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n-html="faq.r2.a">
                 <p><strong>Essential:</strong> Covers sanctions &amp; watchlist screening, adverse media review, corporate registry verification, litigation records, and a preliminary risk summary. Suitable for initial screening before deeper engagement. Delivery: 5–7 business days.</p>
                 <p><strong>Comprehensive:</strong> Adds professional history verification, financial conduct analysis, reputational intelligence from human sources, network mapping, and a detailed risk narrative. Suitable for pre-investment or pre-appointment mandates. Delivery: 10–15 business days.</p>
                 <p><strong>Executive:</strong> A full-spectrum investigation including all Comprehensive elements plus deep financial history, beneficial ownership tracing, extended HUMINT deployment, litigation strategy analysis, and a senior analyst briefing. Bespoke scope and timeline.</p>
@@ -289,10 +298,10 @@
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                Can ISSLA Risk provide ongoing monitoring rather than a one-time report?
+                <span data-i18n="faq.r3.q">Can ISSLA Risk provide ongoing monitoring rather than a one-time report?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n-html="faq.r3.a">
                 <p>Yes. For clients who require continuous visibility on a subject, jurisdiction, or market, we offer retainer-based monitoring arrangements. These are structured individually based on the scope of monitoring required. Contact us to discuss ongoing monitoring requirements.</p>
               </div>
             </div>
@@ -301,34 +310,34 @@
 
           <!-- CATEGORY 6: ENGAGEMENT -->
           <div class="faq-category" id="cat-engagement">
-            <h2 class="faq-category-title">Starting an Engagement</h2>
+            <h2 class="faq-category-title" data-i18n="faq.cat.engagement">Starting an Engagement</h2>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                How do I initiate an engagement with ISSLA Risk?
+                <span data-i18n="faq.e1.q">How do I initiate an engagement with ISSLA Risk?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
-                <p>The simplest way to begin is via our <a href="contact.html">contact form</a> or by emailing contact@isslarisk.com. We will respond within one business day to schedule a confidential briefing call. During that call, we define scope, timeline, deliverables, and commercial terms. No sensitive details about the subject of investigation are required at the inquiry stage — we only need to understand the broad nature of the mandate to provide an initial assessment.</p>
+              <div class="faq-answer" data-i18n-html="faq.e1.a">
+                <p>The simplest way to begin is via our <a href="contact.html">contact form</a> or by emailing info@isslarisk.com. We will respond within one business day to schedule a confidential briefing call. During that call, we define scope, timeline, deliverables, and commercial terms. No sensitive details about the subject of investigation are required at the inquiry stage — we only need to understand the broad nature of the mandate to provide an initial assessment.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                What information do I need to provide to start?
+                <span data-i18n="faq.e2.q">What information do I need to provide to start?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
-                <p>At the outset of an engagement, we require: the identity of the subject (individual or entity), the jurisdiction(s) of primary interest, the purpose of the investigation (investment, compliance, litigation support, etc.), and any specific risk concerns you want prioritized. The more context you provide, the better we can tailor the investigation. Supplementary documents — corporate filings, prior reports, correspondence — are always welcome and treated as strictly confidential.</p>
+              <div class="faq-answer" data-i18n-html="faq.e2.a">
+                <p>At the outset of an engagement, we require: the identity of the subject (individual or entity), the jurisdiction(s) of primary interest, the purpose of the engagement (investment, compliance, litigation support, etc.), and any specific risk concerns you want prioritized. The more context you provide, the better we can tailor the investigation. Supplementary documents — corporate filings, prior reports, correspondence — are always welcome and treated as strictly confidential.</p>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
-                Does ISSLA Risk work with clients outside the United States?
+                <span data-i18n="faq.e3.q">Does ISSLA Risk work with clients outside the United States?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
-              <div class="faq-answer">
+              <div class="faq-answer" data-i18n-html="faq.e3.a">
                 <p>Absolutely. ISSLA Risk serves clients globally regardless of where they are headquartered. Our Panama City office supports Latin American and Caribbean clients, while our Albuquerque headquarters serves North American mandates. We work with organizations based anywhere in the world that need intelligence coverage within our operating regions. Engagements are conducted in English, Spanish, and Portuguese. Communications and deliverables can be provided in the client's preferred language.</p>
               </div>
             </div>
@@ -343,11 +352,11 @@
   <!-- CTA BAND -->
   <section class="cta-band">
     <div class="container">
-      <h2 class="cta-band-title reveal">Didn't Find Your Answer?</h2>
-      <p class="cta-band-sub reveal">Contact our team directly. All inquiries are treated with complete confidentiality and answered within one business day.</p>
+      <h2 class="cta-band-title reveal" data-i18n="faq.cta.title">Didn't Find Your Answer?</h2>
+      <p class="cta-band-sub reveal" data-i18n="faq.cta.sub">Contact our team directly. All inquiries are treated with complete confidentiality and answered within one business day.</p>
       <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:32px;">
-        <a href="contact.html" class="btn btn-primary reveal">Contact Us</a>
-        <a href="services.html" class="btn btn-outline reveal">View Our Services</a>
+        <a href="mailto:info@isslarisk.com" class="btn btn-primary reveal" data-i18n="faq.cta.btn1">Contact Us</a>
+        <a href="services.html" class="btn btn-outline reveal" data-i18n="faq.cta.btn2">View Our Services</a>
       </div>
     </div>
   </section>
@@ -362,43 +371,44 @@
           <span class="logo-dot" aria-hidden="true"></span>
           <span class="logo-text">ISSLA Risk</span>
         </a>
-        <p class="footer-tagline">Navigating Complex Risks with Actionable Intelligence</p>
-        <p class="footer-disclaimer">Intelligence services provided do not constitute legal, regulatory, or compliance counsel.</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Navigating Complex Risks with Actionable Intelligence</p>
+        <p class="footer-disclaimer" data-i18n="footer.disclaimer1">Intelligence services provided do not constitute legal, regulatory, or compliance counsel.</p>
+        <p class="footer-disclaimer" data-i18n="footer.disclaimer2">ISSLA Risk is a corporate intelligence consulting and advisory firm. We do not operate as a licensed private investigation agency.</p>
       </div>
       <div class="footer-nav-group">
-        <p class="footer-col-title">Services</p>
+        <p class="footer-col-title" data-i18n="footer.col.services">Services</p>
         <nav>
           <a href="services.html#due-diligence">Due Diligence</a>
-          <a href="services.html#background-analysis">Background Analysis</a>
-          <a href="services.html#reputation-analysis">Reputation Analysis</a>
+          <a href="services.html#background-analysis">KYC / Customer Due Diligence</a>
+          <a href="services.html#reputation-analysis">Reputational Intelligence</a>
           <a href="services.html#country-risk">Country Risk</a>
         </nav>
       </div>
       <div class="footer-nav-group">
-        <p class="footer-col-title">Company</p>
+        <p class="footer-col-title" data-i18n="footer.col.company">Company</p>
         <nav>
-          <a href="about.html">About</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact</a>
+          <a href="about.html" data-i18n="footer.link.about">About</a>
+          <a href="faq.html" data-i18n="footer.link.faq">FAQ</a>
+          <a href="contact.html" data-i18n="footer.link.contact">Contact</a>
         </nav>
       </div>
       <div class="footer-right">
-        <p class="footer-col-title">Follow</p>
+        <p class="footer-col-title" data-i18n="footer.col.follow">Follow</p>
         <div class="footer-social">
           <a href="https://www.linkedin.com/company/13987422/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
         </div>
-        <p class="footer-col-title" style="margin-top:20px">Legal</p>
+        <p class="footer-col-title" style="margin-top:20px" data-i18n="footer.col.legal">Legal</p>
         <div class="footer-legal">
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="code-of-ethics.html">Code of Ethics</a>
+          <a href="privacy-policy.html" data-i18n="footer.link.privacy">Privacy Policy</a>
+          <a href="code-of-ethics.html" data-i18n="footer.link.ethics">Code of Ethics</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 ISSLA Risk Global Services LLC. All rights reserved.</span>
-      <span>Offices: United States · Panama</span>
+      <span data-i18n="footer.copyright">© 2025 ISSLA Risk Global Services LLC. All rights reserved.</span>
+      <span data-i18n="footer.offices">Offices: United States · Panama</span>
     </div>
   </div>
 </footer>
@@ -441,7 +451,7 @@
     {
       "@type": "Question",
       "name": "How do I initiate an engagement with ISSLA Risk?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The simplest way to begin is via our contact form or by emailing contact@isslarisk.com. We will respond within one business day to schedule a confidential briefing call." }
+      "acceptedAnswer": { "@type": "Answer", "text": "The simplest way to begin is via our contact form or by emailing info@isslarisk.com. We will respond within one business day to schedule a confidential briefing call." }
     }
   ]
 }
@@ -450,5 +460,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="js/main.js" defer></script>
+<script src="js/lang.js" defer></script>
 </body>
 </html>
