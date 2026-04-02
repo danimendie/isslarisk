@@ -29,12 +29,15 @@ RewriteRule ^(.*)/$ /$1 [L,R=301]
   # Permissions Policy — disable unused browser features
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
 
-  # HSTS — enforce HTTPS for 1 year (enable only after confirming HTTPS works)
-  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  # HSTS — enforce HTTPS for 1 year including subdomains
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
   # Content Security Policy
-  # Allows: self, Google Fonts, GSAP CDN, LinkedIn (for social icon)
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://formspree.io;"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;"
+
+  # Cross-Origin policies
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-site"
 
 </IfModule>
 

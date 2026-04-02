@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact ISSLA Risk | Request a Confidential Briefing</title>
+    <!-- Security meta tags -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()" />
+<title>Contact ISSLA Risk | Request a Confidential Briefing</title>
   <meta name="description" content="Request a confidential briefing with ISSLA Risk. All initial contacts are protected under our Code of Ethics. No commitment required to scope a mandate." />
 
   <!-- Canonical -->
@@ -31,7 +36,7 @@
 
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
   <link rel="stylesheet" href="css/main.css" />
@@ -151,16 +156,16 @@
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="full-name" data-i18n-html="contact.form.name.label">Full Name <span style="color:var(--gold)">*</span></label>
-                  <input class="form-input" type="text" id="full-name" name="full-name" placeholder="Your full name" data-i18n-ph="contact.form.name.ph" required />
+                  <input class="form-input" type="text" id="full-name" name="full-name" autocomplete="name" placeholder="Your full name" data-i18n-ph="contact.form.name.ph" required />
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="organization" data-i18n-html="contact.form.org.label">Organization <span style="color:var(--gold)">*</span></label>
-                  <input class="form-input" type="text" id="organization" name="organization" placeholder="Company or firm name" data-i18n-ph="contact.form.org.ph" required />
+                  <input class="form-input" type="text" id="organization" name="organization" autocomplete="organization" placeholder="Company or firm name" data-i18n-ph="contact.form.org.ph" required />
                 </div>
               </div>
               <div class="form-group">
                 <label class="form-label" for="email" data-i18n-html="contact.form.email.label">Email Address <span style="color:var(--gold)">*</span></label>
-                <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required />
+                <input class="form-input" type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com" required />
               </div>
               <div class="form-group">
                 <label class="form-label" for="inquiry-type" data-i18n="contact.form.service.label">Service of Interest</label>
@@ -227,7 +232,7 @@
       <div class="footer-right">
         <p class="footer-col-title" data-i18n="footer.col.follow">Follow</p>
         <div class="footer-social">
-          <a href="https://www.linkedin.com/company/13987422/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://www.linkedin.com/company/13987422/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
         </div>
         <p class="footer-col-title" style="margin-top:20px" data-i18n="footer.col.legal">Legal</p>
         <div class="footer-legal">
@@ -271,8 +276,8 @@
 }
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" defer></script>
 <script src="js/main.js" defer></script>
 
 <script src="js/lang.js" defer></script>
